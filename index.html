@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#0A0D10">
-<title>Installer le Collecteur</title>
+<title>Installer Collector</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap">
@@ -31,12 +31,11 @@ h1{font-family:var(--disp);font-weight:800;font-size:clamp(30px,8.4vw,40px);line
 .lede{color:var(--tn2);font-size:16.5px;margin:0 0 28px}
 .cta{display:flex;align-items:center;justify-content:center;min-height:60px;border-radius:12px;
   background:var(--or);color:var(--nuit);text-decoration:none;font-family:var(--disp);
-  font-weight:800;font-size:18px;letter-spacing:-.01em;-webkit-tap-highlight-color:transparent}
+  font-weight:800;font-size:18px;letter-spacing:-.01em;-webkit-tap-highlight-color:transparent;
+  margin:12px 0 0}
 .cta:active{filter:brightness(.9)}
 .cta:focus-visible{outline:3px solid var(--tn);outline-offset:3px}
-.version{font-family:var(--disp);font-weight:500;font-size:12.5px;color:var(--tn3);
-  text-align:center;margin:10px 0 0;font-variant-numeric:tabular-nums;min-height:1.4em}
-.android{font-size:13px;color:var(--tn3);text-align:center;margin:4px 0 0}
+.android{font-size:13px;color:var(--tn3);text-align:center;margin:8px 0 0}
 h2{font-family:var(--disp);font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;
   color:var(--tn3);margin:44px 0 14px}
 ol{list-style:none;margin:0;padding:0;counter-reset:e}
@@ -53,6 +52,7 @@ li b{font-weight:700;color:var(--tn)}
 .bloc{background:var(--nuit-2);border:1px solid var(--nuit-3);border-radius:10px;padding:16px 18px}
 .bloc p{margin:0;color:var(--tn2);font-size:15px}
 .bloc p + p{margin-top:8px}
+.bloc b{color:var(--tn)}
 .marque{border-inline-start:2px solid var(--or);border-radius:0 10px 10px 0}
 ul{margin:0;padding:0;list-style:none}
 ul li{position:relative;padding:7px 0 7px 22px;color:var(--tn2);font-size:15px}
@@ -61,78 +61,57 @@ ul.oui li::before{background:var(--bon)}
 ul.non li::before{background:var(--nuit-bord)}
 footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--nuit-3);font-size:13px;
   color:var(--tn3)}
+footer a{color:var(--tn2)}
 </style>
 </head>
 <body>
 <main class="wrap">
-  <p class="kick">Collecteur</p>
+  <p class="kick">Collector</p>
   <h1>Ton temps sans course, enfin chiffré.</h1>
-  <p class="lede">L'app compte ton temps connecté, ton temps en course, et la différence. Elle ne touche à rien : elle écoute les notifications et elle compte.</p>
+  <p class="lede">L'app compte ton temps connecté, ton temps en course, et la différence. Elle ne touche à rien : elle lit les notifications de ton app de livraison et elle compte.</p>
 
-  <a class="cta" id="telecharger" href="https://github.com/yonigalaxi-blip/collecteur/releases/latest/download/collecteur.apk">Télécharger le Collecteur</a>
-  <p class="version" id="version"></p>
-  <p class="android">Android seulement.</p>
-
-  <h2>Installer, une fois, 5 minutes</h2>
+  <h2>Installer, une fois</h2>
   <ol>
     <li>
-      <p class="t">Ouvre le fichier téléchargé</p>
-      <p class="d">Le téléphone prévient qu'il vient d'internet : appuie sur <b>Paramètres</b>, active <b>Autoriser cette source</b>, reviens et appuie sur <b>Installer</b>. Si c'est proposé, choisis <b>Installer quand même</b>.</p>
+      <p class="t">Envoie ton adresse Gmail</p>
+      <p class="d">Collector est en test : seules les adresses ajoutées peuvent l'installer. Envoie l'adresse Gmail de ton téléphone (dans le Play Store, touche ta photo en haut à droite) à la personne qui t'a envoyé ce lien, et attends sa réponse.</p>
     </li>
     <li>
-      <p class="t">Donne les deux autorisations</p>
-      <p class="d">Dans l'app, appuie sur <b>Autoriser l'accès aux notifications</b> et active « Collecteur ».</p>
-      <p class="d">Puis <b>Autoriser la localisation</b> et choisis <b>Toujours autoriser</b>, pas « seulement pendant l'utilisation ». L'écran doit afficher trois lignes <b>OK</b> en vert.</p>
+      <p class="t">Ouvre le lien du test dans Chrome</p>
+      <p class="d">Ouvre cette page dans <b>Chrome</b>, pas dans un WhatsApp ou un Telegram « en double » (Xiaomi, Dual apps) : sinon le Play Store refuse d'installer, sans dire pourquoi.</p>
+      <a class="cta" href="https://play.google.com/apps/internaltest/4701398698002612847">Installer depuis le Play Store</a>
+      <p class="android">Android seulement. Accepte l'invitation si c'est proposé, puis <b>Installer</b>.</p>
     </li>
     <li>
-      <p class="t">Xiaomi, Redmi, POCO, Oppo, Realme, OnePlus</p>
-      <p class="d">Ces téléphones coupent les apps au bout de quelques heures, sans prévenir. Réglages, Applications, Collecteur : <b>Démarrage automatique</b> activé, batterie <b>Pas de restriction</b>. Dans les apps récentes, appui long sur Collecteur puis le <b>cadenas</b>.</p>
+      <p class="t">Ouvre Collector et suis les pages</p>
+      <p class="d">L'app te guide, une page par réglage : accès aux notifications, position (choisis la position <b>exacte</b>, <b>pendant l'utilisation de l'app</b>), batterie sans restriction, et sur Xiaomi, Oppo, Vivo, Huawei le démarrage automatique. Chaque page a un bouton qui ouvre le bon réglage.</p>
     </li>
     <li>
       <p class="t">Travaille normalement</p>
-      <p class="d">Appuie sur <b>Commencer la journée</b> quand tu te connectes. C'est tout.</p>
+      <p class="d">Appuie sur <b>Commencer la journée</b> quand tu te connectes pour livrer, et sur <b>Arrêter la journée</b> à la fin. C'est tout.</p>
     </li>
   </ol>
 
   <h2>Les mises à jour</h2>
   <div class="bloc marque">
-    <p>L'app te prévient elle-même : un bandeau <b>Nouvelle version</b> apparaît, tu appuies sur <b>Mettre à jour</b>. Ta journée en cours continue de compter.</p>
-    <p>La première fois, le téléphone demande d'autoriser Collecteur à installer des applis : autorise, reviens, appuie encore.</p>
+    <p>C'est le <b>Play Store</b> qui met Collector à jour, comme tes autres apps. Tu n'as rien à faire.</p>
+    <p>Tu avais l'ancienne version « Collecteur », téléchargée depuis cette page ? Désinstalle-la, puis installe Collector depuis le Play Store : l'ancienne ne se met plus à jour.</p>
   </div>
 
-  <h2>Ce que l'app garde</h2>
+  <h2>Ce que l'app garde, sur ton téléphone</h2>
   <ul class="oui">
     <li>Le contenu des offres reçues : montant, distance, restaurant</li>
-    <li>Ta position au moment de chaque offre</li>
+    <li>Ta position pendant ta journée et à chaque offre</li>
     <li>Combien de temps chaque offre est restée affichée</li>
   </ul>
-  <h2>Ce qu'elle ne touche pas</h2>
+  <h2>Ce qu'elle ne fait pas</h2>
   <ul class="non">
-    <li>Aucune autre application</li>
+    <li>Elle n'appuie sur rien dans ton app de livraison</li>
     <li>Aucun contact, aucun message, aucune photo</li>
-    <li>Rien ne part de ton téléphone tant que tu n'exportes pas toi-même</li>
-    <li>Sa seule connexion : vérifier s'il existe une nouvelle version et la télécharger</li>
+    <li>Rien ne part de ton téléphone : pas de compte, pas de pub, aucune connexion internet</li>
   </ul>
 
-  <footer>Un souci ? Écris à la personne qui t'a envoyé ce lien.</footer>
+  <footer>Un souci ? Écris à la personne qui t'a envoyé ce lien. · <a href="confidentialite.html">Politique de confidentialité</a></footer>
 </main>
-<script>
-// Numero et taille de la derniere version, lus sur GitHub. Si ca echoue,
-// le bouton marche quand meme : il pointe toujours sur la derniere version.
-(async () => {
-  try {
-    const r = await fetch("https://api.github.com/repos/yonigalaxi-blip/collecteur/releases/latest",
-      {headers: {"Accept": "application/vnd.github+json"}});
-    if (!r.ok) return;
-    const rel = await r.json();
-    const apk = (rel.assets || []).find(a => a.name === "collecteur.apk");
-    const nom = (rel.tag_name || "").replace(/^v/, "");
-    if (!nom || !apk) return;
-    const date = new Date(rel.published_at).toLocaleDateString("fr-FR", {day: "numeric", month: "long"});
-    document.getElementById("version").textContent =
-      "Version " + nom + " · " + Math.round(apk.size / 1024) + " Ko · " + date;
-  } catch (e) {}
-})();
-</script>
 </body>
 </html>
