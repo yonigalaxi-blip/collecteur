@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0A0D10">
+<title>Installer le Collecteur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --nuit:#0A0D10; --nuit-2:#141A20; --nuit-3:#1E262E; --nuit-bord:#2A343E;
+  --or:#F5A524; --bon:#2ED573; --non:#FF4757;
+  --tn:#F4F7FA; --tn2:#96A3B0; --tn3:#5E6C7A;
+  --disp:"Archivo",-apple-system,"Segoe UI",Roboto,sans-serif;
+  --corps:"Manrope",-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--nuit);color:var(--tn);font-family:var(--corps);
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
+.wrap{max-width:520px;margin:0 auto;padding:36px 20px 56px}
+.kick{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--or);margin:0 0 14px}
+h1{font-family:var(--disp);font-weight:800;font-size:clamp(30px,8.4vw,40px);line-height:1.04;
+  letter-spacing:-.03em;margin:0 0 14px;text-wrap:balance}
+.lede{color:var(--tn2);font-size:16.5px;margin:0 0 28px}
+.cta{display:flex;align-items:center;justify-content:center;min-height:60px;border-radius:12px;
+  background:var(--or);color:var(--nuit);text-decoration:none;font-family:var(--disp);
+  font-weight:800;font-size:18px;letter-spacing:-.01em;-webkit-tap-highlight-color:transparent}
+.cta:active{filter:brightness(.9)}
+.cta:focus-visible{outline:3px solid var(--tn);outline-offset:3px}
+.version{font-family:var(--disp);font-weight:500;font-size:12.5px;color:var(--tn3);
+  text-align:center;margin:10px 0 0;font-variant-numeric:tabular-nums;min-height:1.4em}
+.android{font-size:13px;color:var(--tn3);text-align:center;margin:4px 0 0}
+h2{font-family:var(--disp);font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--tn3);margin:44px 0 14px}
+ol{list-style:none;margin:0;padding:0;counter-reset:e}
+ol li{counter-increment:e;position:relative;padding:16px 0 16px 46px;border-top:1px solid var(--nuit-3)}
+ol li:last-child{border-bottom:1px solid var(--nuit-3)}
+ol li::before{content:counter(e);position:absolute;left:0;top:14px;width:30px;height:30px;
+  border-radius:50%;background:var(--nuit-2);border:1px solid var(--nuit-bord);color:var(--or);
+  font-family:var(--disp);font-weight:800;font-size:14px;display:flex;align-items:center;
+  justify-content:center}
+li b{font-weight:700;color:var(--tn)}
+.t{font-family:var(--disp);font-weight:700;font-size:16px;margin:0 0 4px;color:var(--tn)}
+.d{color:var(--tn2);font-size:15px;margin:0}
+.d + .d{margin-top:6px}
+.bloc{background:var(--nuit-2);border:1px solid var(--nuit-3);border-radius:10px;padding:16px 18px}
+.bloc p{margin:0;color:var(--tn2);font-size:15px}
+.bloc p + p{margin-top:8px}
+.marque{border-inline-start:2px solid var(--or);border-radius:0 10px 10px 0}
+ul{margin:0;padding:0;list-style:none}
+ul li{position:relative;padding:7px 0 7px 22px;color:var(--tn2);font-size:15px}
+ul li::before{content:"";position:absolute;left:2px;top:15px;width:8px;height:8px;border-radius:50%}
+ul.oui li::before{background:var(--bon)}
+ul.non li::before{background:var(--nuit-bord)}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--nuit-3);font-size:13px;
+  color:var(--tn3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <p class="kick">Collecteur</p>
+  <h1>Ton temps sans course, enfin chiffré.</h1>
+  <p class="lede">L'app compte ton temps connecté, ton temps en course, et la différence. Elle ne touche à rien : elle écoute les notifications et elle compte.</p>
+
+  <a class="cta" id="telecharger" href="https://github.com/yonigalaxi-blip/collecteur/releases/latest/download/collecteur.apk">Télécharger le Collecteur</a>
+  <p class="version" id="version"></p>
+  <p class="android">Android seulement.</p>
+
+  <h2>Installer, une fois, 5 minutes</h2>
+  <ol>
+    <li>
+      <p class="t">Ouvre le fichier téléchargé</p>
+      <p class="d">Le téléphone prévient qu'il vient d'internet : appuie sur <b>Paramètres</b>, active <b>Autoriser cette source</b>, reviens et appuie sur <b>Installer</b>. Si c'est proposé, choisis <b>Installer quand même</b>.</p>
+    </li>
+    <li>
+      <p class="t">Donne les deux autorisations</p>
+      <p class="d">Dans l'app, appuie sur <b>Autoriser l'accès aux notifications</b> et active « Collecteur ».</p>
+      <p class="d">Puis <b>Autoriser la localisation</b> et choisis <b>Toujours autoriser</b>, pas « seulement pendant l'utilisation ». L'écran doit afficher trois lignes <b>OK</b> en vert.</p>
+    </li>
+    <li>
+      <p class="t">Xiaomi, Redmi, POCO, Oppo, Realme, OnePlus</p>
+      <p class="d">Ces téléphones coupent les apps au bout de quelques heures, sans prévenir. Réglages, Applications, Collecteur : <b>Démarrage automatique</b> activé, batterie <b>Pas de restriction</b>. Dans les apps récentes, appui long sur Collecteur puis le <b>cadenas</b>.</p>
+    </li>
+    <li>
+      <p class="t">Travaille normalement</p>
+      <p class="d">Appuie sur <b>Commencer la journée</b> quand tu te connectes. C'est tout.</p>
+    </li>
+  </ol>
+
+  <h2>Les mises à jour</h2>
+  <div class="bloc marque">
+    <p>L'app te prévient elle-même : un bandeau <b>Nouvelle version</b> apparaît, tu appuies sur <b>Mettre à jour</b>. Ta journée en cours continue de compter.</p>
+    <p>La première fois, le téléphone demande d'autoriser Collecteur à installer des applis : autorise, reviens, appuie encore.</p>
+  </div>
+
+  <h2>Ce que l'app garde</h2>
+  <ul class="oui">
+    <li>Le contenu des offres reçues : montant, distance, restaurant</li>
+    <li>Ta position au moment de chaque offre</li>
+    <li>Combien de temps chaque offre est restée affichée</li>
+  </ul>
+  <h2>Ce qu'elle ne touche pas</h2>
+  <ul class="non">
+    <li>Aucune autre application</li>
+    <li>Aucun contact, aucun message, aucune photo</li>
+    <li>Rien ne part de ton téléphone tant que tu n'exportes pas toi-même</li>
+    <li>Sa seule connexion : vérifier s'il existe une nouvelle version et la télécharger</li>
+  </ul>
+
+  <footer>Un souci ? Écris à la personne qui t'a envoyé ce lien.</footer>
+</main>
+<script>
+// Numero et taille de la derniere version, lus sur GitHub. Si ca echoue,
+// le bouton marche quand meme : il pointe toujours sur la derniere version.
+(async () => {
+  try {
+    const r = await fetch("https://api.github.com/repos/yonigalaxi-blip/collecteur/releases/latest",
+      {headers: {"Accept": "application/vnd.github+json"}});
+    if (!r.ok) return;
+    const rel = await r.json();
+    const apk = (rel.assets || []).find(a => a.name === "collecteur.apk");
+    const nom = (rel.tag_name || "").replace(/^v/, "");
+    if (!nom || !apk) return;
+    const date = new Date(rel.published_at).toLocaleDateString("fr-FR", {day: "numeric", month: "long"});
+    document.getElementById("version").textContent =
+      "Version " + nom + " · " + Math.round(apk.size / 1024) + " Ko · " + date;
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
