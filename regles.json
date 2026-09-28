@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "date": "2026-09-28",
+  "commentaire": "Regles de lecture des notifications. Version 1 : ecrite sur le faux Wolt (faux-wolt/) et des formats supposes ; a corriger sur les vraies captures. Une regle change ici, pas dans l'app.",
+  "plateformes": [
+    {
+      "nom": "wolt",
+      "paquets": ["wolt"],
+      "offre": {
+        "canaux": ["newdeliveryofferchannel", "new_delivery_offer", "delivery_offers", "task_offers"],
+        "titres": ["nouvelle commande", "nouvelle livraison", "new order", "new delivery", "new task", "new offer",
+                   "הזמנה חדשה", "משלוח חדש", "משימה חדשה", "הצעה חדשה",
+                   "новый заказ", "новая доставка", "новое задание"],
+        "extras": {"montant": "wolt.delivery_fee", "km": "wolt.distance_km", "resto": "wolt.venue_name", "expire": "wolt.expires_at"},
+        "montant": ["(\\d+(?:[.,]\\d{1,2})?)\\s*(?:₪|ils\\b|nis\\b|ש\"ח|ש״ח|שח\\b)",
+                    "(?:₪|ils|nis)\\s*(\\d+(?:[.,]\\d{1,2})?)"],
+        "km": ["(\\d+(?:[.,]\\d{1,2})?)\\s*(?:km\\b|ק\"מ|ק״מ|קמ\\b|км\\b)"],
+        "resto": ["(?m)^([^·\\n]+?)\\s*·",
+                  "(?:récupération|recuperation|pickup|pick-up|איסוף|забрать)\\s*:?\\s*([^\\n·]+)"],
+        "arrets": ["(\\d+)\\s*(?:arrêts|arrets|stops|drops|עצירות|נקודות|остановк)"],
+        "expire_s": 45
+      }
+    }
+  ]
+}
